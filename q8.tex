@@ -1,0 +1,33 @@
+\subsection{Циркуляция}
+Циркуляцией векторного поля по данному замкнутому контуру $\Gamma$ называется криволинейный интеграл второго рода, взятый по $\Gamma$. По определению
+
+$$C=\oint \limits _{\Gamma }{\mathbf {F} d\mathbf {l} }=\oint \limits _{\Gamma }{(F_{x}dx+F_{y}dy+F_{z}dz)}$$
+где $\mathbf {F} =\{F_{x},F_{y},F_{z}\}$ — векторное поле (или вектор-функция), определенное в некоторой области $D$, содержащей в себе контур $\Gamma$, $d\mathbf {l} =\{dx,dy,dz\}$ — бесконечно малое приращение радиус-вектора $\mathbf  {l}$ вдоль контура. 
+
+Окружность на символе интеграла подчёркивает тот факт, что интегрирование производится по замкнутому контуру. Приведенное выше определение справедливо для трёхмерного случая, но оно, как и основные свойства, перечисленные ниже, прямо обобщается на произвольную размерность пространства.
+
+\subsection{Формула Стокса}Циркуляция вектора $\vec F$ по произвольному контуру $\Gamma$ равна потоку вектора $\operatorname {rot} \mathbf {F}$ через произвольную поверхность $S$, ограниченную данным контуром.
+
+$$\oint \limits _{\Gamma }{\mathbf {F} d\mathbf {l} =\iint \limits _{S}{\operatorname {rot} }}\mathbf {F} \cdot \mathbf {n} dS$$,
+где $$\operatorname {rot} \mathbf {F} =[\nabla ,\mathbf {F} ]=\left|{\begin{matrix}\mathbf {e} _{x}&\mathbf {e} _{y}&\mathbf {e} _{z}\\{\frac {\partial }{\partial x}}&{\frac {\partial }{\partial y}}&{\frac {\partial }{\partial z}}\\F_{x}&F_{y}&F_{z}\\\end{matrix}}\right|$$— ротор (вихрь) вектора F.
+
+
+\subsection{Формула Грина}
+В случае, если контур плоский, например лежит в плоскости OXY, справедлива теорема Грина
+
+$$\displaystyle \oint \limits _{\Gamma }{(F_{x}dx+F_{y}dy)}=\iint \limits _{\Gamma ^{\circ }}{\left({\frac {\partial F_{y}}{\partial x}}-{\frac {\partial F_{x}}{\partial y}}\right)dxdy}$$
+где $\Gamma ^{\circ }$ — плоскость, ограничиваемая контуром $\Gamma$  (внутренность контура).
+
+
+Инвариантное определение ротора
+
+Пусть $M \in V$. Возьмём малую плоскую площадку $\sigma$, ограниченную контуром  $C$ .
+ По теореме Стокса циркуляция по $C$ равна $Z = \oint \limits_C \bar a d\bar r = \iint\limits _{\sigma}\operatorname{rot} \bar a\dot \bar n d\sigma$. 
+Считая, что $\operatorname{rot} \bar a$ мало меняется на $\sigma$ и что поверхностный интеграл равен $\operatorname{rot} \bar a(M)\dot \bar n(M)\sigma = |\operatorname{rot} \bar a(M)|cos(\phi)\dot \sigma$, 
+получим $Z=|\operatorname{rot} \bar a(M)|cos(\phi)\dot\sigma$.
+Будем теперь крутить площадку вокруг точки  $M$, при этом циркуляция меняется вместе с $cos\phi$. Максимальное значение циркуляция получит при $\phi=0$, т.е. когда направления $\operatorname{rot} \bar a(M)$ и $\bar n(M)$ совпадут. Следовательно, $\operatorname{rot} \bar a(M)$ указывает направление, вокруг которого циркуляция максимальна и равна $Z_{\mbox { max } } =|\operatorname{rot} \bar a(M)| \cdot \sigma$
+
+Тогда модуль ротора определяется соотношением:
+
+$$| rot\bar { a } (M)| =\frac { \mbox { Z } _ { \mbox { max } } } { \sigma } $$
+
