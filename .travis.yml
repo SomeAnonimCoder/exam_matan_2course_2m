@@ -6,7 +6,7 @@ before_install:
 - sudo apt-get install -y --no-install-recommends texlive-full chktex
 script:
 - mkdir _build
-- for i in *.tex; do pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build $i; done
+- pdflatex -interaction=nonstopmode -halt-on-error -output-directory _build exam.tex
 deploy:
   provider: releases
   api_key: 
