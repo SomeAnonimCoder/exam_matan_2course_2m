@@ -1,0 +1,33 @@
+
+Интеграл Фурье — это представление непериодической функции $f(x)$ в виде интеграла, равного непрерывной сумме гармоник, зависящих от частоты $\omega$ на интервале $[0; \infty)$.
+
+При этом говорят, что непериодическая функция $f(x)$ имеет непрерывный спектр; частоты образующих её гармоник изменяются непрерывно. Функции $A(\omega)$ и $B(\omega)$ дают закон распределения амплитуд (и начальных фаз) в зависимости от частоты $\omega$.
+
+Представление функции $f(x)$ на интервале $[-\infty, \infty]$:
+
+$$\frac 1{\pi}\int\limits_0^{\infty}d\omega\int\limits_{-\infty}^{\infty}f(t)cos\omega(t-x)dt$$
+
+$$f(x)=\int\limits_0^{\infty}[A(\omega)cos\omega x+
+B(\omega)sin\omega x]d\omega$$
+, где
+$$A(\omega)=\frac 1{\pi}\int\limits_{-\infty}^{\infty} f(t)cos\omega tdt$$ 
+$$B(\omega)=\frac 1{\pi}\int\limits_{-\infty}^{\infty}f(t)sin\omega tdt$$
+Представление чётной функции $f(x)$ на интервале $(-\infty; \infty)$:
+
+$$f(x)=\frac 2{\pi}\int\limits_0^{\infty} cos\omega xd\omega\int\limits_0^{\infty} f(t)cos\omega tdt$$
+$$fчёт(x)=\int\limits_0^{\infty} A(\omega)cos\omega xd\omega$$
+ где $$A(\omega)=\frac 2{\pi}\int\limits_0^{\infty} f(t)cos\omega tdt$$
+Представление нечётной функции $f(x)$ на интервале $(-\infty; \infty)$:
+
+$$f(x)=\frac 2{\pi}\int\limits_0^{\infty}sin\omega xd\omega\int\limits_0^{\infty} f(t)sin\omega tdt$$
+$$f(x)=\int\limits_0^{\infty}B(\omega)sin\omega xd\omega$$
+, где $$B(\omega)=\frac{2}{\pi}\int\limits_0^{\infty}f(t)sin \omega tdt$$
+
+$$f(x)=\frac 2{\pi}\int\limits_0^{\infty}cos\omega xd\omega\int\limits_0^{\infty} f(t)cos\omega tdt$$
+$$f(x)=\int\limits_0^{\infty} A(\omega)cos\omega xd\omega$$
+, где $$A(\omega)=\frac2{\pi}\int\limits_0^{\infty} f(t)cos\omega tdt$$
+Представление функции $f(x)$ интегралом с синусами на интервале $[0; \infty)$:
+
+$$f(x)=\frac 2{\pi}\int\limits_0^{\infty}sin\omega xd\omega\int\limits_0^{\infty} f(t)sin\omega tdt$$
+$$f(x)=\int\limits_0^{\infty} B(\omega)sin\omega xd\omega$$
+, где $$B(\omega)=\frac 2{\pi}\int\limits_0^{\infty} f(t)sin\omega tdt$$
