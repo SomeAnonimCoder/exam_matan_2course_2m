@@ -1,0 +1,55 @@
+\section {Поток векторного поля. Определение потока, свойства и методы вычисления. Физический смысл потока.}
+
+\begin{center}
+\textbf{Поток векторного поля. Определение потока. Методы вычисления потока.}
+\end{center}
+
+Поток векторного поля может быть вычислен в виде поверхностного интеграла, который выражает общее количество жидкости, протекающей в единицу времени через некоторую поверхность в направлении вектора скорости течения жидкости в данной точке. 
+
+\par\bigskip
+
+\textbf{Определение:} Потоком векторного поля  $\vec{a}$ через поверхность $\Sigma$ называется поверхностный интеграл первого рода по $\Sigma$ от скалярного произведения $\vec{a}$ на единичный вектор нормали $\vec{n}_0$ к выбранной стороне поверхности: 
+
+$$\Pi= \lim_{\Delta\sigma_{max}\rightarrow 0} \sum_{i=1}^{n}(\vec{a}(P_i)\cdot\Delta\vec{\sigma}) = \iint\limits_\Sigma(\vec{a}\cdot
+d\vec{\sigma})=\iint\limits_\Sigma(\vec{a}\cdot
+\vec{n}_0) d\sigma = \iint\limits_\Sigma a_n\, d \sigma$$
+
+\textbf{Примечание:} $a_n$ - проекция поля $\vec{a}$ на нормаль к поверхности $\vec{n}_0$.
+
+\par\bigskip
+\textbf{Рассмотрим второй вариант вычисления потока векторного поля:} 
+
+Так как векторное поле $\vec{a}=a_x(x,y,z)\vec{i}+a_y(x,y,z)\vec{j}+a_z(x,y,z)\vec{k}$, а единичный вектор нормали $\vec{n}_0 = (\cos{\alpha}, \cos{\beta}, \cos{\gamma})$,  по формуле скалярного произведения векторов: $\vec{a}\cdot \vec{n}_0 = a_x\cos{\alpha} + a_y\cos{\beta} + a_z\cos{\gamma}$.
+Учитывая, что $\cos{\alpha}\, d\sigma = dydz, \, \cos{\beta}\, d\sigma = dzdx, \, \cos{\gamma}\, d\sigma = dxdy$, поток векторного поля можно вычислить и как поверхностный интеграл второго рода:
+
+$$\Pi=\iint\limits_\Sigma a_x dydz + a_y dzdx + a_z dxdy.$$
+
+\begin{center}
+	\textbf{Свойства потока.}
+\end{center}
+
+1) Линейность:
+
+$$\iint\limits_\Sigma(\alpha \vec{a}_1 + \beta \vec{a}_2, \vec{n}_0)d\sigma = \alpha\iint\limits_\Sigma(\vec{a}_1\cdot
+\vec{n}_0) d\sigma + \beta\iint\limits_\Sigma(\vec{a}_2\cdot
+\vec{n}_0) d\sigma  $$
+
+2) Аддитивность. Если поверхность $\Sigma$ состоит из нескольких гладких частей $\Sigma_1, \Sigma_2, \Sigma_3, ..., \Sigma_n$, которые могут пересекаться разве что по своим границам, то:
+ $$\Pi=\iint\limits_\Sigma(\vec{a}\cdot\vec{n}_0) d\sigma = \sum_{i=1}^{n} \iint\limits_{\Sigma_{i}} (\vec{a}\cdot\vec{n}_0 )d\sigma$$
+  
+  
+3) Поток меняет знак при изменении стороны поверхности. Пусть $\Sigma^+$ – сторона поверхности $\Sigma$, на которой выбрана нормаль $\vec{n}_0$, а $\Sigma^-$ – сторона поверхности $\Sigma$, на которой берется нормаль $-\vec{n}_0$, тогда:
+
+$$\iint\limits_{\Sigma^+}(\vec{a}\cdot
+\vec{n}_0) d\sigma = -\iint\limits_{\Sigma^-}(\vec{a}\cdot
+\vec{n}_0) d\sigma $$
+
+
+\begin{center}
+	\textbf{Физический смысл потока.}
+\end{center}
+
+Пусть $\vec{a}(P_i)$ – поле скоростей некоторой жидкости $\vec{a} = \vec{V}$, а  $\Sigma$ – некоторая поверхность в поле, тогда: $(\vec{a}\cdot d\vec{\sigma}) = (\vec{a}\cdot \vec{n}_0) d\sigma = |\vec{V}|\cos\varphi d\sigma = V_n \cdot d\sigma$ - объём столба жидкости с основанием $d\sigma$ и высотой $V_n$ ($V_n$ - проекция поля $\vec{V}$ на нормаль к поверхности $\vec{n}_0$), т. е. объем
+жидкости, протекающей через площадку $d\sigma$ в единицу времени в направлении $\vec{n}_0$. Суммируя по поверхности $\Sigma$ , получаем, что поток жидкости, протекающей через поверхность $\Sigma$ в единицу времени равен:
+$$\Pi=\iint\limits_\Sigma(\vec{a} \cdot d \vec{\sigma}).$$
+
